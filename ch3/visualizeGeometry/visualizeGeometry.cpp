@@ -14,7 +14,8 @@ struct RotationMatrix {
   Matrix3d matrix = Matrix3d::Identity();
 };
 
-ostream &operator<<(ostream &out, const RotationMatrix &r) {
+// 函数返回值是out引用
+ostream& operator<<(ostream &out, const RotationMatrix &r) {
   out.setf(ios::fixed);
   Matrix3d matrix = r.matrix;
   out << '=';
@@ -24,7 +25,7 @@ ostream &operator<<(ostream &out, const RotationMatrix &r) {
   return out;
 }
 
-istream &operator>>(istream &in, RotationMatrix &r) {
+istream& operator>>(istream &in, RotationMatrix &r) {
   return in;
 }
 
